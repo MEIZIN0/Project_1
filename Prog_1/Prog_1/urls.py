@@ -21,4 +21,7 @@ from users import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.user_list, name='user_list'),
+    path('create/', views.create_user, name='create_user'),
+    path('update/<int:pk>/', views.update_user, name='update_user'),
+    path('delete/<int:pk>/', views.delete_user, name='delete_user'),
 ]

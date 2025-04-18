@@ -5,9 +5,14 @@
 </head>
 <body>
     <h1>Список пользователей</h1>
+    <a href="{% url 'create_user' %}">Добавить нового</a>
     <ul>
         {% for user in users %}
-            <li>ID: {{ user.id }} - ФИО: {{ user.full_name }}</li>
+            <li>
+                ID: {{ user.id }} - ФИО: {{ user.full_name }}
+                <a href="{% url 'update_user' user.id %}">Изменить</a>
+                <a href="{% url 'delete_user' user.id %}">Удалить</a>
+            </li>
         {% endfor %}
     </ul>
 </body>
