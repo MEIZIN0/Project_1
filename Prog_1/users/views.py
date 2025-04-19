@@ -32,4 +32,4 @@ def delete_user(request, pk):
     if request.method == 'POST':
         user.delete()
         return redirect('user_list')
-    return render(request, 'users/user_con_delete.html', {'user': user})
+    return render(request, 'users/User_con_delete.html', {'user': user})

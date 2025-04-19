@@ -1,6 +1,15 @@
-<form method="post">
-    {% csrf_token %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Удаление пользователя</title>
+</head>
+<body>
+    <h1>Удаление пользователя</h1>
     <p>Вы уверены, что хотите удалить пользователя "{{ user }}"?</p>
-    <button type="submit">Удалить</button>
-    <a href="{% url 'user_list' %}">Отмена</a>
-</form>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Да, удалить</button>
+        <a href="{% url 'user_list' %}">Отмена</a>
+    </form>
+</body>
+</html>
